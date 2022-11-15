@@ -1,0 +1,47 @@
+body {
+    background-color: #fff;
+    background-image: url("https://cdn.pixabay.com/photo/2019/11/30/00/25/lost-places-4662339_1280.jpg");
+    font-family: 'Gaegu', cursive;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.box {
+    margin-top: 50%;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 550px;
+    margin: auto;
+}
+
+.is-sparta {
+    color: #E97777!important;
+}
+
+.button.is-sparta {
+    background-color: #E97777;
+    border-color: transparent;
+    color: #fff !important;
+    font-family: 'Gaegu', cursive;
+    font-size: 18px;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: gray;
+    color: #fff !important;
+    font-family: 'Gaegu', cursive;
+    font-size: 18px;
+}
+
+.input::placeholder {
+    font-family: 'Gaegu', cursive;
+}
+
+.button:hover {
+    background-color: #6C4AB6 !important;
+}
