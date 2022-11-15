@@ -1,0 +1,9 @@
+@import "style.css";
+
+
+* {
+        font-family: 'PuradakGentleGothicR';
+}
+.box{
+    height: 700px;
+}

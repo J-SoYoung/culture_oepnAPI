@@ -26,3 +26,9 @@ collection.estimated_document_count()
 # MongoDB에서 countDocuments() 메서드는 선택 기준과 일치하는 문서 수를 계산합니다.
 # 선택 기준과 일치하는 문서의 총 수를 나타내는 숫자 값을 반환합니다.
 # 첫 번째는 선택 기준이고 다른 하나는 선택 사항입니다.
+
+# 특정 단어가 들어간 데이터 검색: $regex
+db.collection.find({ 'content': {'$regex': '안녕'} })
+
+# title과 content 모두에 특정단어가 들어간 데이터 검색: $and + $regex
+db.collection.find({'$and': [ {'title':{'$regex':'안녕'}},{'content':{'$regex':'안녕'}} ]})

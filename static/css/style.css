@@ -1,6 +1,13 @@
 @import "reset.css";
-@import "footer.css";
 @import "nav.css";
+
+/* 폰트 여기에 두고 골라써도 돼요 ! ㅋ*/
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .contain{
     width: 1200px;
@@ -67,3 +74,5 @@ h2{
     padding: 10px;
     box-sizing: border-box;
 }
+
+
