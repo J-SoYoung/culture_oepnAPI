@@ -1,0 +1,84 @@
+@import "style.css";
+
+
+* {
+    font-family: 'PuradakGentleGothicR';
+}
+
+.culture_today{
+    height: 150px;
+    margin: 20px 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.culture_today .culture_title{
+    margin: 0;
+    font-size: 50px;
+    font-family: 'PuradakGentleGothicR';
+}
+.culture_box {
+    background-color: #f1f3f5;
+    width: 100%;
+    height:  300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 280px ;
+    box-sizing: border-box;
+}
+.culture_box .culture_img {
+    width: 200px;
+    height: 240px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+.culture_box .culture_img img{
+    width: 100%;
+}
+.culture_info {
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: 'GowunDodum-Regular';
+}
+.culture_review_input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f1f3f5;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.culture_review_input textarea{
+    width: 70%;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+.culture_review_input button {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.culture_review_show{
+    border: 1px solid #f1f3f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.culture_review_show .review_view{
+    width: 100%;
+    background-color: #f1f3f5;
+    padding: 20px;
+    margin-right: 20px;
+}
+.culture_review_show button {
+    padding: 20px;
+    box-sizing: border-box;
+}
