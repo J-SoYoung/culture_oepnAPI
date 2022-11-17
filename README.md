@@ -1,52 +1,62 @@
+# 항해 C반 9조 1주차 미니프로젝트<br>
+<br>
+
+# 🎞 THEATER 🕶<br>
+**언제, 어디서나, 편리하게 만나는 생생한 예술의 감동!**<br>
+영화를 보는 사람은 많지만 연극과 같이 문화 예술 공연을 보는 사람은 적다.<br>
+**연극, 클래식, 전시와 같은 문화를 자주 접해보지 않는 사람들을 위해 <br>
+먼저 문화 예술 공연을 경험해 본 사람들이 간단한 정보를 알려주기 위해 만들어진 웹사이트<br>**
+<br>
+
+# 📕 와이어프레임 사진
+![image](https://user-images.githubusercontent.com/85012454/202397510-c41e0a42-a463-4330-81ad-5e7ae76f0035.png)
+<br>
+<br>
+
+
+# 📆개발 기간
+2022년 11월 14일 ~ 2022년 11월 17일<br>
+<br>
+
+# 👯팀원
+- 팀장: 정소영
+- 팀원: 김소라
+- 팀원: 권성현
+- 팀원: 김수예
+
+# 🛠️기술 스택<br>
+HTML, CSS, JS<br>
+Python<br>
+MongoDB<br>
+Flask<br>
+JWT<br>
+<br>
+
+# 💡구현 기능<br>
+- 회원가입
+- 로그인, 로그아웃
+- 아이디 중복확인, 아이디/비밀번호 형식 확인
+- openApi(문화공연 정보)를 이용한 공연 정보 가져오기
+- 공연정보를 카테고리별로 나누어 보여주기
+- 공연정보에 대한 리뷰 등록하기
+- 마이페이지에서 유저가 등록한 리뷰를 모아 보여주기
+<br>
+<br>
+
+# 📕 **API (개발해야 하는 기능들)**
+| 기능 | Method | URL | request | response |
+| --- | --- | --- | --- | --- |
+| 로그인 | POST | api/login | { ‘id’ : id, ‘pw’ : pw } | 로그인정보 |
+| 로그아웃 | POST | api/logout |  |  |
+| 회원가입 | POST | api/signup | { ‘id’ : id } |  |
+| 아이디중복 | POST | api/check_id | { ‘id’ : id } | { true / false } |
+| 메인페이지 리스트 보여주기 | GET | main | { ’TITLE’: TITLE, ‘DATE’:DATE, ‘MAIN_IMG’:MAIN_IMG, ‘ORG_LINK’: ORG_LINK, ‘THEMACODE’: THEMACODE } | 리스트 정보 |
+| 메인페이지 APi저장 | POST | main | ALL  | 저장완료 메세지 |
+| 메인페이지 검색 | POST | main/info | { ‘query’ = 검색어} | 검색결과 리스트 |
+| 세부페이지 데이터 보여주기 | GET | detail | { ’TITLE’: TITLE, ‘DATE’:DATE, ‘MAIN_IMG’:MAIN_IMG, ‘ORG_LINK’: ORG_LINK, ‘THEMACODE’: THEMACODE, ‘id’ : id, ‘comment’ : comment  } | 리스트 정보, 리스트에 해당하는 코멘트 정보 |
+| 세부페이지 코멘트 DB저장 | POST | detail | { ‘id’ : id , ‘comment’ : comment } |  |
+
+
 ## 서울시 openAPI를 사용해 간단한 프로그램 만들기.<br>
 서울시 openAPI (문화공연정보) <br>
-https://data.seoul.go.kr/dataList/OA-15486/S/1/datasetView.do
-<br>
-<br>
-
-날씨가 서늘해지니 음악회나 공연이 생각이나는데,<br> 
-일일이 검색하기가 귀찮아서 한번에 보고 싶어 만들어봤다. <br>
-**오늘의 목표는 openAPI의 활용이었기에 디자인이나 로그인 기능은 크게 비중을 두지 않았다.**<br>
-말그대로 조각 프로젝트..라고나 할까ㅎㅎ 허접하지만 허접하지 않다!!!<br>
-nav나 footer는 지난번에 사용하던 것을 그대로 가져왔닼ㅋㅋㅋㅋ<br>
-<br>
-
-### 기본은 클래식 공연정보 /버튼 클릭-> 해당 공연정보를 보여줌<br>
-![img.png](img.png)
-<br>
-<br>
-
-
-### 검색결과를 바탕으로 공연정보를 가져오는 것<br>
-![img_1.png](img_1.png)
-<br>
-
-### 샘플URL<br>
-
-http://openapi.seoul.go.kr:8088/(인증키)/xml/culturalEventInfo/1/5/클래식/서울시향 <br>
-
-- KEY - 인증키 : 회원가입 후 발급가능 
-- TYPE - xml : 요청파일타입 ( xml, json, xls )
-- SERVICE - culturalEventInfo : 서비스명
-- START-INDEX - 1 : 요청 데이터 시작 번호
-- END-INDEX - 5 : 요청 데이터 끝 번호 ( 1/5가 되면 1번째부터 5번째가 된다. - 5개의 데이터 출력 ) 
-- CODENAME - 클래식( 다양한 코드네임이 있다. 대분류 느낌 )
-- TITLE - 서울시향 : title<br>
-<br>
-
-**url의 순서를 지켜야한다**<br>
-위의 7가지가 순서대로 다 들어가 있어야 api가 정상 작동한다. <br>
-코드네임 없이 검색으로만 api를 사용하고 싶다면, 코드네임 자리를 "  / /서울시향 " 빈칸으로 만들어줘야 한다.<br>
-<br>
-**codename**<br>
-문화교양/강좌 , 전시/미술 , 뮤지컬/오페라 , 기타 , 연극 , 무용 , 영화 , 국악 , 클래식 , 콘서트 , 축제-문화/예술 ,
-축제-전통/역사 , 축제-시민화합 , 축제-기타 , 축제-자연/경관, 독주/독창회 <br>
-<br>
-**type요청 파일 타입**<br>
-샘플url에는 xml타입으로 설정돼 있다.<br>
-나는 그것도 모르고 console에서 document로 출력이 돼서... 값을 사용할 수 없었다.<br>
-나중에서야 요청타입을 바꿀 수 있음을 확인하고 json형식으로 출력해 사용했다ㅠㅡㅠ<br>
-<br>
-<br>
-<br>
-💘 공공API 사용! 생각보다 쉽고 괜찮은거 같다. 조금더 구상해서 재미있는 걸 만들어봐야겠다! 헤헿😎😍😘<br>
+https://data.seoul.go.kr/dataList/OA-15486/S/1/datasetView.do<br>
