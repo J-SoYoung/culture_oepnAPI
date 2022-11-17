@@ -1,6 +1,6 @@
 import requests
 from pymongo import MongoClient
-client = MongoClient('mongodb+srv://test:sparta@cluster0.aphlzi8.mongodb.net/Cluster0?retryWrites=true&w=majority')
+client = MongoClient('mongodb+srv://개인정보 건으로 인한 코드삭제')
 db = client.theater
 
 url = 'http://openapi.seoul.go.kr:8088/6e4957636974686432346a6c614d7a/json/culturalEventInfo/1/100/ /'
