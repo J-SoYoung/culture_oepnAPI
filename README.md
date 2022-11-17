@@ -25,11 +25,11 @@
 - 팀원: 김수예
 
 # 🛠️기술 스택<br>
-HTML, CSS, JS<br>
-Python<br>
-MongoDB<br>
-Flask<br>
-JWT<br>
+- HTML, CSS, JS<br>
+- Python<br>
+- MongoDB<br>
+- Flask<br>
+- JWT<br>
 <br>
 
 # 💡구현 기능<br>
@@ -44,19 +44,12 @@ JWT<br>
 <br>
 
 # 📕 **API (개발해야 하는 기능들)**
-| 기능 | Method | URL | request | response |
-| --- | --- | --- | --- | --- |
-| 로그인 | POST | api/login | { ‘id’ : id, ‘pw’ : pw } | 로그인정보 |
-| 로그아웃 | POST | api/logout |  |  |
-| 회원가입 | POST | api/signup | { ‘id’ : id } |  |
-| 아이디중복 | POST | api/check_id | { ‘id’ : id } | { true / false } |
-| 메인페이지 리스트 보여주기 | GET | main | { ’TITLE’: TITLE, ‘DATE’:DATE, ‘MAIN_IMG’:MAIN_IMG, ‘ORG_LINK’: ORG_LINK, ‘THEMACODE’: THEMACODE } | 리스트 정보 |
-| 메인페이지 APi저장 | POST | main | ALL  | 저장완료 메세지 |
-| 메인페이지 검색 | POST | main/info | { ‘query’ = 검색어} | 검색결과 리스트 |
-| 세부페이지 데이터 보여주기 | GET | detail | { ’TITLE’: TITLE, ‘DATE’:DATE, ‘MAIN_IMG’:MAIN_IMG, ‘ORG_LINK’: ORG_LINK, ‘THEMACODE’: THEMACODE, ‘id’ : id, ‘comment’ : comment  } | 리스트 정보, 리스트에 해당하는 코멘트 정보 |
-| 세부페이지 코멘트 DB저장 | POST | detail | { ‘id’ : id , ‘comment’ : comment } |  |
+![image](https://user-images.githubusercontent.com/85012454/202402310-b465751b-86e5-4a09-9c0d-0add994aaee0.png)
+<br>
+<br>
 
 
-## 서울시 openAPI를 사용해 간단한 프로그램 만들기.<br>
-서울시 openAPI (문화공연정보) <br>
-https://data.seoul.go.kr/dataList/OA-15486/S/1/datasetView.do<br>
+# 프로젝트를 마치고
+<br>
+<br>
+<br>
