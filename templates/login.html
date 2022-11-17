@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>💫Theater</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
@@ -14,51 +14,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 </head>
 <body>
-<div class="wrapper">
-    <section class="hero">
-    </section>
-    <section class="section">
-        <div class="container">
-            <div class="box">
-                <div class="media-content" id="log-in-box">
-                    <div class="content">
-                        <div class="field">
-                            <div class="field has-addons">
-                                <div class="control has-icons-left" style="width:100%">
-                                    <input class="input" id="input-username" placeholder="아이디" type="text">
-                                    <span class="icon is-small is-left">
+<div class="body-wrapper">
+    <div class="img_box">
+        <img src="../static/img/bg1.jpg">
+    </div>
+    <div class="content_box">
+        <div class="title-wrapper">
+            <div class="hero-body has-text-centered" style="padding-bottom:1rem;margin:auto;">
+                <h1 class="title">Theater</h1>
+                <h5 class="subtitle">문화 예술 공연의 경험을 나누어 보세요!</h5>
+            </div>
+        </div>
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="box">
+                    <div class="media-content" id="log-in-box">
+                        <div class="content">
+                            <div class="field">
+                                <div class="field has-addons">
+                                    <div class="control has-icons-left" style="width:100%">
+                                        <input class="input" id="input-username" placeholder="아이디" type="text">
+                                        <span class="icon is-small is-left">
                                         <i class="fa fa-user"></i>
                                     </span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="control has-icons-left">
-                                <input class="input" id="input-password" placeholder="비밀번호" type="password">
-                                <span class="icon is-small is-left">
+                                <p class="help" id="help-id-login"></p>
+                                <div class="control has-icons-left">
+                                    <input class="input" id="input-password" placeholder="비밀번호" type="password"
+                                           onclick="id_input_check()">
+                                    <span class="icon is-small is-left">
                                     <i class="fa fa-lock"></i>
                                 </span>
+                                </div>
+                                <p class="help is-danger" id="help-password-login"></p>
                             </div>
-                        </div>
-                        <div class="has-text-centered" id="div-sign-in-or-up">
-                            <nav class="level is-mobile">
-                                <button class="level-item button is-sparta" onclick="log_in()">
-                                    로그인
-                                </button>
-                            </nav>
-                            <hr>
-                            <h4 class="mb-3">아직 회원이 아니라면</h4>
-                            <nav class="level is-mobile">
-                                <button class="level-item button is-sparta is-outlined"
-                                        onclick="location.href='/signup';">
-                                    회원가입
-                                </button>
-                            </nav>
+                            <div class="has-text-centered" id="div-sign-in-or-up">
+                                <nav class="level is-mobile">
+                                    <button class="level-item button is-sparta" onclick="log_in()">
+                                        로그인
+                                    </button>
+                                </nav>
+                                <hr>
+                                <h4 class="mb-3">아직 회원이 아니라면</h4>
+                                <nav class="level is-mobile">
+                                    <button class="level-item button is-sparta is-outlined"
+                                            onclick="location.href='/signup';">
+                                        회원가입
+                                    </button>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
 </div>
 
 </body>

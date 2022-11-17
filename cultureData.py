@@ -19,8 +19,9 @@ for list in theater_list :
         'ORG_LINK': list['ORG_LINK'],
         'MAIN_IMG': list['MAIN_IMG'],
         'CODENAME': list['CODENAME'],
-        'M_id': id
+        'PROGRAM': list['PROGRAM'],
+        'theater_id': id
     }
     # print(doc)
-    db.theater_list.insert_one(doc)
+    # db.theater_list.insert_one(doc)
 
