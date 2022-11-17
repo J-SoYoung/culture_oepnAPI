@@ -1,4 +1,5 @@
 # 항해 C반 9조 1주차 미니프로젝트<br>
+notion page : https://neat-crabapple-0cc.notion.site/3858db3db67743f1a05d9515d3211082?v=b8f9201a163e495a9eff6fb466a156eb<br>
 <br>
 
 # 🎞 THEATER 🕶<br>
