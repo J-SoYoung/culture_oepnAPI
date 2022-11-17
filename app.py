@@ -10,8 +10,7 @@ from bson.json_util import dumps
 
 
 ca = certifi.where()
-# client = MongoClient('mongodb+srv://user01:sparta@cluster0.noigl81.mongodb.net/?retryWrites=true&w=majority')
-client = MongoClient('mongodb+srv://test:sparta@cluster0.aphlzi8.mongodb.net/Cluster0?retryWrites=true&w=majority')
+client = MongoClient('mongodb+srv://개인정보 유출로 인한 코드 삭제')
 db = client.theater
 
 app = Flask(__name__)
